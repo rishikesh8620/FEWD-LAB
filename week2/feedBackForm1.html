@@ -1,0 +1,136 @@
+ <!-- Problem 1: 
+Create a Feedback form using HTML (With Internal CSS), it should contain
+-> Name (optional)
+-> Email(Optional)
+-> phone (optional)
+-> Rating
+-> Any Questions regarding product or service.
+-> Additional comments (optional)
+-> Submit button -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback Form</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .optional {
+            font-weight: normal;
+            color: #888;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <form>
+            <label for="name">Name <span class="optional">(optional)</span></label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email <span class="optional">(optional)</span></label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Phone <span class="optional">(optional)</span></label>
+            <input type="tel" id="phone" name="phone">
+
+            <label>Rating</label>
+            <div class="radio-group">
+                <input type="radio" id="rating1" name="rating" value="1">
+                <label for="rating1">1</label>
+
+                <input type="radio" id="rating2" name="rating" value="2">
+                <label for="rating2">2</label>
+
+                <input type="radio" id="rating3" name="rating" value="3">
+                <label for="rating3">3</label>
+
+                <input type="radio" id="rating4" name="rating" value="4">
+                <label for="rating4">4</label>
+
+                <input type="radio" id="rating5" name="rating" value="5">
+                <label for="rating5">5</label>
+            </div>
+
+            <label for="questions">Any Questions regarding product or service</label>
+            <textarea id="questions" name="questions"></textarea>
+
+            <label for="comments">Additional Comments <span class="optional">(optional)</span></label>
+            <textarea id="comments" name="comments"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
